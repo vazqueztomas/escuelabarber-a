@@ -1,21 +1,27 @@
-import { Navbar, Container } from "react-bootstrap"
+import { Stack, Image, Text, Link } from "@chakra-ui/react";
+import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
 
-export default function BarraNavegacion(props){
-    return(
-        <Navbar bg="dark" variant="dark">
-    <Container>
-      <Navbar.Brand href="#home">
-        <img
-          alt={props.name}
-          src={props.img}
-          width="30"
-          height="30"
-          className="d-inline-block align-top"
-        />{' '}
-      La barbería de Toto - Escuela
-      </Navbar.Brand>
-    </Container>
-  </Navbar>
-
-    )
+export default function BarraNavegacion(props) {
+  return (
+    <Stack
+      direction={"row"}
+      justifyContent={"space-between"}
+      alignItems={"center"}
+      marginY={4}
+      paddingX={6}
+    >
+      <Stack direction={"row"} textAlign={"start"}>
+        <Image
+          src="https://reservaturno.com/img/icono-barberia.png"
+          boxSize={"30px"}
+        ></Image>
+        <Text>Barberia Escuela</Text>
+      </Stack>
+      <Stack>
+        <Link href = 'google.com' isExternal>
+          <PersonOutlineIcon />
+        </Link>
+      </Stack>
+    </Stack>
+  );
 }
