@@ -8,6 +8,7 @@ export default function MyMenu() {
         Contenido
       </MenuButton>
       <MenuList>
+        <MenuItem><Link to = {"/comprar.html"}>Comprar curso</Link></MenuItem>
         <MenuItem><Link to = {"/cursobarberia.html"}>Ir al curso </Link></MenuItem>
         <MenuItem>Desloguear</MenuItem>
       </MenuList>
