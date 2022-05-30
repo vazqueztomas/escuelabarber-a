@@ -1,5 +1,5 @@
 
-import BarraNavegacion from './BarraNavegacion'
+import BarraNavegacion from '../BarraNavegacion'
 export default function Header() {
   return (
     <>
