@@ -1,11 +1,11 @@
-import { Stack, Text, Image } from "@chakra-ui/react";
+
 import Hero from "../components/Hero";
 import Header from "../components/sections/Header";
 import Ofrecemos from "../components/sections/Ofrecemos";
 
 
 export default function Comprar() {
-  let color = "#ECC94B";
+
   return (
     <header>
       <Header></Header>
