@@ -6,13 +6,13 @@ import Titulo from "../components/Titulo";
 
 export default function Curso(props) {
   return (
-    <Stack>
-        <Header></Header>
-      <Titulo titulo = "Contenido"></Titulo>
-      <Subtitulo subtitulo = "El siguiente curso de barbería tiene varios videos explicativos de cortes, y se debe realizar en forma ordenada para adquirir bien los conceptos"></Subtitulo>
-      <Stack justifyContent={"center"} alignItems={"center"} py={12}>
-          <ListadoVideos/>
+    <>
+      <Header></Header>
+        <Text mx={12} fontSize={"3xl"}>Contenido</Text>
+        <Text mx={12} fontSize={"xl"}>El siguiente curso de barbería tiene varios videos explicativos de cortes, y se debe realizar en forma ordenada para adquirir bien los conceptos</Text>
+        <Stack justifyContent={["center"]} alignItems={["center"]} py={12}>
+          <ListadoVideos />
       </Stack>
-    </Stack>
+    </>
   );
 }

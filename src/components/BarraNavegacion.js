@@ -6,23 +6,21 @@ export default function BarraNavegacion(props) {
   return (
     <Stack
       direction={"row"}
-      justifyContent={"space-between"}
+      justifyContent={["space-between"]}
       alignItems={"center"}
       marginY={6}
-      paddingX={6}
+      marginX={6}
+      
     >
       <Stack direction={"row"} textAlign={"start"} alignItems={"center"}>
         <Image
           src="https://reservaturno.com/img/icono-barberia.png"
           boxSize={"30px"}
         ></Image>
-        <Text fontWeight={"bold"}>Barberia "El negrito"</Text><Text fontSize={"sm"}>- Escuela</Text>
+        <Text fontWeight={"bold"} fontSize={["sm"]}>Barberia "El negrito"</Text>
       </Stack>
       <Stack direction={"row"} alignItems={"center"} spacing={8} justifyContent={"center"}>
         <MyMenu/>
-        <Link href = 'google.com' isExternal>
-          <PersonOutlineIcon />
-        </Link>
       </Stack>
     </Stack>
   );
