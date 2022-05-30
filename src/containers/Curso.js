@@ -1,8 +1,6 @@
 import { Stack, Text } from "@chakra-ui/react";
 import ListadoVideos from "../components/ListadoVideos";
 import Header from "../components/sections/Header";
-import Subtitulo from "../components/Subtitulo";
-import Titulo from "../components/Titulo";
 
 export default function Curso(props) {
   return (

@@ -13,17 +13,26 @@ export default function Elegirnos() {
         justifyContent={["center","space-evenly"]}
         spacing={[10,10,20]}
       >
-        <Stack direction={"column"} spacing={[5,5,10]}>
-          <Stack direction={"row"} alignItems={"center"} spacing={4}>
+        <Stack direction={"column"} spacing={[5,5,10]} mx={[6,4,2]}>
+          <Stack direction={"row"} alignItems={"center"} textAlign={"start"} spacing={4}justifyContent={"space-between"}>
+            <Stack>
             <Text fontSize={"3xl"}>Gran demanda laboral</Text>
+            <Text fontSize={"xl"}>La barbería siempre tuvo, y va a seguir teniendo una gran demanda laboral.</Text>
+            </Stack>
             <CallMadeIcon   sx={{color: {color}, fontSize: 35}}/>
           </Stack>
-          <Stack direction={"row"} alignItems={"center"}>
+          <Stack direction={"row"} alignItems={"center"} textAlign={"start"} spacing={4}justifyContent={"space-between"}>
+          <Stack>
             <Text fontSize={"3xl"}>Precio accesible</Text>
+            <Text fontSize={"xl"}>Nuestros precios compiten contra los mejores del mercado.</Text>
+            </Stack>
             <AttachMoneyIcon   sx={{color: {color}, fontSize: 35}}/>
           </Stack>
-          <Stack direction={"row"} alignItems={"center"}>
+          <Stack direction={"row"} alignItems={"center"} textAlign={"start"} justifyContent={"space-between"}spacing={4}>
+            <Stack>
             <Text fontSize={"3xl"}>24/7 dedicandonos a esto</Text>
+            <Text fontSize={"xl"}>Podrás preguntarnos lo que quieras por mensaje directo.</Text>
+            </Stack>
             <RepeatIcon sx={{color: {color}, fontSize: 35}} />
           </Stack>
         </Stack>

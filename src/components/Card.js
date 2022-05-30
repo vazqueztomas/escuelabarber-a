@@ -1,10 +1,11 @@
-import { Stack, Text, Image } from "@chakra-ui/react";
+import { Stack, Text, Image, Link } from "@chakra-ui/react";
 import Boton from "./Boton";
+
 export default function Card(props) {
   return (
     <Stack
       border={"1px solid black"}
-      w={380}
+      w={[230,380]}
       alignItems={"center"}
       borderRadius={8}
     >
@@ -16,7 +17,8 @@ export default function Card(props) {
         {props.titulo}
       </Text>
       <Text fontSize={15}>{props.subtitulo}</Text>
-      <Boton textContent={props.precio}></Boton>
+      <Link href = "https://mpago.la/2NmYubH" isExternal>
+      <Boton textContent={props.precio}></Boton></Link>
     </Stack>
   );
 }

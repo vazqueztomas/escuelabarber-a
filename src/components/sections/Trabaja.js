@@ -1,4 +1,4 @@
-import { Image, Stack, Text, Button } from "@chakra-ui/react";
+import { Image, Stack, Text, Button, Box} from "@chakra-ui/react";
 import {Link} from 'react-router-dom';
 export default function Elegirnos() {
   return (
@@ -7,12 +7,14 @@ export default function Elegirnos() {
       direction={["column", "column", "row"]}
       spacing={8}
     >
+      <Box>
       <Image
         src="https://fondosmil.com/fondo/64240.jpg"
         alt="barbería-elegirnos"
-        maxWidth={"680px"}
-        w={"100%"}
+        width={780}
       ></Image>
+      </Box>
+      
       <Stack direction={"column"} spacing={4} paddingX={2}>
         <Text
           fontSize={"5xl"}
