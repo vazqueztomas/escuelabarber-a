@@ -1,5 +1,6 @@
 import { Stack, Image, Text, Link } from "@chakra-ui/react";
 import PersonOutlineIcon from "@mui/icons-material/PersonOutline";
+import MyMenu from "./Menu";
 
 export default function BarraNavegacion(props) {
   return (
@@ -17,7 +18,8 @@ export default function BarraNavegacion(props) {
         ></Image>
         <Text fontWeight={"bold"}>Barberia "El negrito"</Text><Text fontSize={"sm"}>- Escuela</Text>
       </Stack>
-      <Stack>
+      <Stack direction={"row"} alignItems={"center"} spacing={8} justifyContent={"center"}>
+        <MyMenu/>
         <Link href = 'google.com' isExternal>
           <PersonOutlineIcon />
         </Link>

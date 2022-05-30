@@ -1,6 +1,10 @@
-import { Stack, Text, Image, Box, Button } from "@chakra-ui/react";
+import { Stack, Text, Image, Box, } from "@chakra-ui/react";
+import Boton from "./Boton";
 import {Link} from 'react-router-dom';
-export default function Hero() {
+import Titulo from "./Titulo";
+import Subtitulo from "./Subtitulo";
+
+export default function Hero(props) {
   return (
     <Stack direction={["column-reverse", "column", "row"]} marginX={10}>
       <Stack
@@ -11,22 +15,15 @@ export default function Hero() {
         spacing={6}
         paddingX={10}
       >
-        <Text fontSize={["3xl", "4xl"]}>
-          Queres desarrollar y transformar tu futuro?{" "}
-        </Text>
-        <Text fontSize={"xl"}>
-          Comenzá con esta maravillosa profesión de ser barbero/a. Dale un giro
-          a tu vida y aprendé en esta industria que no tiene límites.
-        </Text>
-        <Link to="/comprar.html">
-          <Button colorScheme="yellow" size="lg">
-            EMPEZÁ YA
-          </Button>
+        <Titulo titulo = {props.titulo}></Titulo>
+        <Subtitulo subtitulo = {props.subtitulo}></Subtitulo>
+        <Link to={"/comprar.html"}>
+          <Boton textContent = {props.textContent}></Boton>
         </Link>
       </Stack>
       <Box>
         <Image
-          src="https://blog.agendapro.com/hubfs/Barberia.png"
+          src={props.image}
           alt="Hero"
           borderRadius={4}
           width={780}
