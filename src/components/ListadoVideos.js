@@ -25,7 +25,6 @@ function VerificaUser() {
     const uid = user.uid;
     if (USUARIOS.includes(uid)) {
       setPago(true)
-      // console.log("El usuario pago")
     }
   } else {
     setPago(false)
