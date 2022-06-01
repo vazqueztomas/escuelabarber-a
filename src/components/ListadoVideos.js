@@ -21,10 +21,8 @@ function VerificaUser() {
   const auth = getAuth();
   const [pago, setPago] = useState(false)
   onAuthStateChanged(auth, (user) => {
-  if (user) {
-  
+  if (user) {  
     const uid = user.uid;
-    console.log("este es el user activo", uid)
     if (USUARIOS.includes(uid)) {
       setPago(true)
       // console.log("El usuario pago")
