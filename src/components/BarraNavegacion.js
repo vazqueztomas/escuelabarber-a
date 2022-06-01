@@ -71,12 +71,12 @@ export default function BarraNavegacion() {
           <>
           <MyMenu />
           <Button colorScheme="yellow" borderColor = {"none"} onClick={desloguearUser}>
-            Desloguear
+            Cerrar sesión
           </Button>
           </>
         ) : (
           <Button colorScheme="yellow" borderColor = {"none"} onClick={loguearUser}>
-            Loguear
+            Iniciar sesión
           </Button>
         )}
       </Stack>

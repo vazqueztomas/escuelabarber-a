@@ -1,9 +1,9 @@
 import { Stack, Image, Box, } from "@chakra-ui/react";
-import Boton from "./Boton";
+import Boton from "../Boton";
 import {Link} from 'react-router-dom';
-import Titulo from "./Titulo";
-import Subtitulo from "./Subtitulo";
-import SubText from "./SubText";
+import Titulo from "../Titulo";
+import Subtitulo from "../Subtitulo";
+import SubText from "../SubText";
 
 export default function Hero(props) {
   return (

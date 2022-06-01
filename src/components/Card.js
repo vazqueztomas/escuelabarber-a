@@ -6,7 +6,7 @@ export default function Card(props) {
   return (
     <Stack
       border={`4px solid ${color}`}
-      w={[230,380]}
+      w={[230, 380]}
       alignItems={"center"}
       borderRadius={8}
       p={8}
@@ -16,12 +16,16 @@ export default function Card(props) {
         w={200}
         borderRadius={12}
       ></Image>
-      <Text fontWeight={"bold"} fontSize={20} >
+      <Text fontWeight={"bold"} fontSize={20}>
         {props.titulo}
       </Text>
       <Text fontSize={15}>{props.subtitulo}</Text>
-      <Link href = "https://mpago.la/2NmYubH" isExternal>
-      <Boton textContent={props.precio}></Boton></Link>
+      <Link
+        href="https://mpago.la/2y3sBEb"
+        isExternal
+      >
+        <Boton textContent={props.precio}></Boton>
+      </Link>
     </Stack>
   );
 }

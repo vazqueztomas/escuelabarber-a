@@ -1,11 +1,12 @@
 
-import { Box, Stack, Image,  } from "@chakra-ui/react";
+import { Box, Stack, Image,   } from "@chakra-ui/react";
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import Ofrecemos from "../components/sections/Ofrecemos";
 import SubText from "../components/SubText";
 import Subtitulo from "../components/Subtitulo";
 import Titulo from "../components/Titulo";
+
 
 
 
@@ -38,6 +39,7 @@ export default function Comprar() {
     </Stack>
       <Ofrecemos/>
       <Footer></Footer>
+      
     </>
   );
 }

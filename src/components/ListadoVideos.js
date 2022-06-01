@@ -7,11 +7,48 @@ import {
   Box,
   UnorderedList,
   ListItem,
+  Stack
 } from "@chakra-ui/react";
 import AcordeonVideos from "./AcordeonVideos";
+import SubText from './SubText'
+import { getAuth, onAuthStateChanged } from "firebase/auth";
+import Titulo from "./Titulo";
 
-export default function ListadoVideos(props) {
+import { useState } from "react";
+
+function VerificaUser() {
+  const USUARIOS = ["GSbofvexX6VVTIltq4Sr2foJw473"]
+  const auth = getAuth();
+  const [pago, setPago] = useState(false)
+  onAuthStateChanged(auth, (user) => {
+  if (user) {
+  
+    const uid = user.uid;
+    console.log("este es el user activo", uid)
+    if (USUARIOS.includes(uid)) {
+      setPago(true)
+      // console.log("El usuario pago")
+    }
+  } else {
+    setPago(false)
+  }
+});
+return pago
+}
+
+
+
+
+export default function ListadoVideos(props) {      
   return (
+    <Stack>
+      {VerificaUser() ? <Videos/> : <Stack><Titulo titulo = "Debes comprar el curso para poder ver los videos!"></Titulo><SubText subtext = 'Si ya compraste el curso, y todavia no te aparece en esta sección, por favor mandanos un mail a benescuela@gmail.com'></SubText></Stack>}
+    </Stack>
+  );
+}
+
+const Videos = () => {
+  return(
     <Accordion
       defaultIndex={[0]}
       allowMultiple
@@ -165,5 +202,5 @@ export default function ListadoVideos(props) {
         video="https://www.youtube.com/embed/jPTLY9EC0w4"
       ></AcordeonVideos>
     </Accordion>
-  );
+  )
 }
