@@ -1,13 +1,12 @@
 import { Stack, Text } from "@chakra-ui/react";
 import ListadoVideos from "../components/ListadoVideos";
-import ModalLogin from "../components/ModalLogin";
+import ModalLogin from "../components/Autenticacion";
 import Header from "../components/sections/Header";
 
 
 export default function Curso(props) {
   return (
     <>
-    <ModalLogin></ModalLogin>
       <Header></Header>
         <Text mx={12} fontSize={"3xl"}>Contenido</Text>
         <Text mx={12} fontSize={"xl"}>El siguiente curso de barbería tiene varios videos explicativos de cortes, y se debe realizar en forma ordenada para adquirir bien los conceptos</Text>

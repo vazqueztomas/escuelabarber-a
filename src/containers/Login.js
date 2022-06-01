@@ -1,8 +1,6 @@
-
-import ModalLogin from "../components/ModalLogin";
-
+import Autenticacion from "../components/Autenticacion"
 export default function Login(){
     return(
-        <ModalLogin></ModalLogin>
+        <Autenticacion></Autenticacion>
     )
 }

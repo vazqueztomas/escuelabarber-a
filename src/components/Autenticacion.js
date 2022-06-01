@@ -13,6 +13,9 @@ import { useState } from "react";
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
 import { Link } from "react-router-dom";
+import Home from "../containers/Home";
+import Login from "../containers/Login";
+import BarraNavegacion from "./BarraNavegacion";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -36,29 +39,11 @@ const analytics = getAnalytics(app);
 const provider = new GoogleAuthProvider();
 const auth = getAuth();
 
-export default function ModalLogin() {
-  const [logeado, setLogeado] = useState(false);
-  // verificamos si esta logeado o deslogeado
-  onAuthStateChanged(auth, (user) => {
-    if (user) {
-      // User is signed in, see docs for a list of available properties
-      // https://firebase.google.com/docs/reference/js/firebase.User
-      const uid = user.uid;
-      console.log("uid", uid);
-      logeado = setLogeado(true)
-    } else {
-      console.log("Usuario deslogeado");
-      logeado = setLogeado(false)
-    }
-  });
-  return logeado ? <Button><Link to = "/cursobarberia.html">Ir al curso</Link></Button> : <ButtonLogin />;
-}
-
 const ButtonLogin = () => (
   <Button onClick={loguearUser}>Iniciar sesion con Google</Button>
 );
 
-let loguearUser = () => {
+export function loguearUser() {
   signInWithPopup(auth, provider).then((res) => {
     let logUser = {
       uid: res.user.uid,
@@ -68,12 +53,17 @@ let loguearUser = () => {
     };
     console.log(logUser);
   });
-
   auth.languageCode = "es";
-};
+}
 
-let desloguearUser = () => {
+export function desloguearUser() {
   signOut(auth).then((res) => {
-    <ButtonLogin />;
+    console.log(res);
   });
-};
+}
+
+export default function Autenticacion(props) {
+  // verificamos si esta logeado o deslogeado
+  ;
+  // return logeado;
+}

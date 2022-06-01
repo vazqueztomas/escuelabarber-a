@@ -3,6 +3,7 @@ import Boton from "./Boton";
 import {Link} from 'react-router-dom';
 import Titulo from "./Titulo";
 import Subtitulo from "./Subtitulo";
+import SubText from "./SubText";
 
 export default function Hero(props) {
   return (
@@ -12,9 +13,10 @@ export default function Hero(props) {
         direction={"column"}
         alignItems={"center"}
         justifyContent={"center"}
-        spacing={[2,2,6]}
+        spacing={[2,2,4]}
         paddingX={[0,0,10]}
       >
+        <SubText subtext = "Mejora tus habilidades cambiando tu vida."></SubText>
         <Titulo titulo = {props.titulo}></Titulo>
         <Subtitulo subtitulo = {props.subtitulo}></Subtitulo>
         <Link to={"/comprar.html"}>

@@ -1,21 +1,42 @@
 
-import Hero from "../components/Hero";
+import { Box, Stack, Image,  } from "@chakra-ui/react";
 import Header from "../components/sections/Header";
 import Ofrecemos from "../components/sections/Ofrecemos";
+import SubText from "../components/SubText";
+import Subtitulo from "../components/Subtitulo";
+import Titulo from "../components/Titulo";
+
 
 
 export default function Comprar() {
-
   return (
     <>
       <Header></Header>
-      <Hero
-        titulo="Dale un giro a tu vida y comenzá"
-        subtitulo="Dale un giro a tu entorno laboral y trabajá de lo que a vos te gusta. No te podés perder ésta oportunidad."
-        textContent="COMPRAR AHORA"
-        image="https://www.axa.co.uk/globalassets/new-website/business/who-we-cover/2020_02_barbers/barber_masthead.jpg?width=1600&mode=crop&heightratio=0.5625&quality=80"
-        ></Hero>
+      <Stack direction={["column-reverse", "column", "row"]} marginX={[10]}>
+      <Stack
+        className="text"
+        direction={"column"}
+        alignItems={"center"}
+        justifyContent={"center"}
+        spacing={[2,2,6]}
+        paddingX={[0,0,10]}
+      > 
+        <SubText subtext= "Confiá en vos."></SubText>
+        <Titulo titulo = "Tu aventura comienza ahora. Cambiá tu futuro."></Titulo>
+        <Subtitulo subtitulo = "Con nuestro curso podes cambiar tu futuro y el estilo de todos los demás. No te lo podés perder."></Subtitulo>
+        
+      </Stack>
+      <Box>
+        <Image
+          src="https://www.buenosaires.gob.ar/sites/gcaba/files/field/image/960x640-cerini-2.png"
+          alt="Hero"
+          borderRadius={4}
+          width={780}
+        />
+      </Box>
+    </Stack>
       <Ofrecemos/>
+      
     </>
   );
 }

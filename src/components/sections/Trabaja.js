@@ -1,6 +1,8 @@
 import { Image, Stack, Text, Button, Box} from "@chakra-ui/react";
 import {Link} from 'react-router-dom';
+import SubText from "../SubText";
 export default function Elegirnos() {
+  let color = "#ECC94B"
   return (
     <Stack
       paddingY={"20px"}
@@ -16,10 +18,10 @@ export default function Elegirnos() {
       </Box>
       
       <Stack direction={"column"} spacing={4} paddingX={2}>
+        <SubText subtext="Es el momento."></SubText>
         <Text
           fontSize={"5xl"}
-          color={"#ECC94B"}
-          backgroundColor={"black"}
+          color={color}
           py={1}
           px={3}
           fontWeight={"bold"}
@@ -28,7 +30,7 @@ export default function Elegirnos() {
         </Text>
         <Text fontSize={"xl"} paddingX={20}>
           La barbería está en demanda continuamente y la gente{" "}
-          <strong>SIEMPRE</strong> se va a cortar el pelo, así que trabajo no va
+          <Box as = "span" fontWeight={"bolder"} color= {color}>SIEMPRE</Box> se va a cortar el pelo, así que trabajo no va
           a faltar.
         </Text>
         <Text fontSize={"2xl"}>¿Que estás esperando?</Text>

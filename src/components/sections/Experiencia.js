@@ -11,6 +11,7 @@ export default function Experiencia() {
       justifyContent={["space-evenly"]}
       alignItems={["center"]}
       marginY={20}
+      py={5}
     >
       <Stack wordBreak={"break-word"} maxWidth={"300px"} alignItems={"center"}>
         <Stack
