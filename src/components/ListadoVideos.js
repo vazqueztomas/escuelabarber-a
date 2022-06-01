@@ -16,13 +16,30 @@ import Titulo from "./Titulo";
 
 import { useState } from "react";
 
-function VerificaUser() {
-  const USUARIOS = ["GSbofvexX6VVTIltq4Sr2foJw473"]
+import { getDatabase,ref, onValue} from "firebase/database";
+
+const db = getDatabase();
+const refUsers = ref(db, "usuarios/")
+
+
+export function VerificaUser(usuarios) {
+  let USUARIOS = []
   const auth = getAuth();
   const [pago, setPago] = useState(false)
+
+  onValue(refUsers, (snapshot) => {
+    const data = snapshot.val()
+    data.map((e) => {
+      USUARIOS.push(e)
+    })
+    
+})
+console.log(USUARIOS)
+
   onAuthStateChanged(auth, (user) => {
   if (user) {  
     const uid = user.uid;
+    console.log(USUARIOS.includes(uid))
     if (USUARIOS.includes(uid)) {
       setPago(true)
     }

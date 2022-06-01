@@ -3,13 +3,13 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import {desloguearUser, loguearUser } from "./Autenticacion";
 import MyMenu from "./Menu";
-
 import {
   getAuth,
   onAuthStateChanged,
 } from "firebase/auth";
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
+import { VerificaUser } from "./ListadoVideos";
 
 const firebaseConfig = {
   apiKey: "AIzaSyB9zRE2sXrXypQmhADDMTgMGgsV-wkJMoo",
