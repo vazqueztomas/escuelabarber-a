@@ -2,6 +2,7 @@ import { Stack, Text } from "@chakra-ui/react";
 import ListadoVideos from "../components/ListadoVideos";
 import ModalLogin from "../components/Autenticacion";
 import Header from "../components/sections/Header";
+import Footer from "../components/sections/Footer";
 
 
 export default function Curso(props) {
@@ -13,6 +14,7 @@ export default function Curso(props) {
         <Stack justifyContent={["center"]} alignItems={["center"]} py={12}>
           <ListadoVideos />
       </Stack>
+      <Footer></Footer>
     </>
   );
 }
