@@ -13,7 +13,7 @@ export default function Ofrecemos() {
         <Card
           titulo="Programa completo"
           subtitulo="Nuestro programa completo incluye todos los videos, ayuda personalizada y retos exclusivos "
-          precio="$2700 "
+          precio="$2999"
         ></Card>
         <Stack direction={["column"]} spacing={[5, 5, 10]}>
           <Stack direction={["column-reverse","row"]} alignItems={"center"} justifyContent={"space-between"} px={8}>
@@ -32,7 +32,7 @@ export default function Ofrecemos() {
             <Text fontSize={"2xl"}>
               Precio accesible y económico (el precio esta en pesos ARS$)
             </Text>
-            <Text fontSize={"lg"}>Porque sabemos lo difícil que esta la economía, por solo $2500 ARS podrás llevarte el curso completo de barbería.</Text>
+            <Text fontSize={"lg"}>Porque sabemos lo difícil que esta la economía, por solo $2999 ARS podrás llevarte todos los videos para aprender de barbería.</Text>
 
             </Stack>
             <AttachMoneyIcon sx={{ color: { color }, fontSize: 35 }} />

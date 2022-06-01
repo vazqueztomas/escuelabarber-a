@@ -22,8 +22,8 @@ const db = getDatabase();
 const refUsers = ref(db, "usuarios/")
 
 
-export function VerificaUser(usuarios) {
-  let USUARIOS = []
+export function VerificaUser() {
+  const USUARIOS = []
   const auth = getAuth();
   const [pago, setPago] = useState(false)
 

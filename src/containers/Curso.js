@@ -1,11 +1,12 @@
 import { Stack, Text } from "@chakra-ui/react";
-import ListadoVideos from "../components/ListadoVideos";
-import ModalLogin from "../components/Autenticacion";
+import ListadoVideos, { VerificaUser } from "../components/ListadoVideos";
 import Header from "../components/sections/Header";
 import Footer from "../components/sections/Footer";
 
-
 export default function Curso(props) {
+  
+    VerificaUser();
+  
   return (
     <>
       <Header></Header>
