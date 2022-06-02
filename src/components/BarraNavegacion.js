@@ -70,12 +70,12 @@ export default function BarraNavegacion() {
         {estado ? (
           <>
           <MyMenu />
-          <Button colorScheme="yellow" borderColor = {"none"} onClick={desloguearUser}>
+          <Button colorScheme="yellow.500" borderColor = {"none"} variant = {"outline"} onClick={desloguearUser}>
             Cerrar sesión
           </Button>
           </>
         ) : (
-          <Button colorScheme="yellow" borderColor = {"none"} onClick={loguearUser}>
+          <Button colorScheme="yellow" borderColor = {"none"}  variant = {"outline"}onClick={loguearUser}>
             Iniciar sesión
           </Button>
         )}

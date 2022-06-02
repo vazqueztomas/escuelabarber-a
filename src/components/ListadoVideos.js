@@ -71,7 +71,7 @@ const Videos = () => {
     >
       <AcordeonVideos
         titulo="Capítulo 1: Introduccion a la barbería"
-        contenido="La barbería más que un oficio es considerado una profesión, siendofundamental en el cuidado estético masculino y las nuevas tendenciasen cabello y barbas. La tecnología y las nuevas técnicas de estilos han marcado un antes y un después en el desarrollo de las actividades de los barberos. Ahora pongamos una buena música y comencemos a aprender. Manos a la obra!"
+        contenido="La barbería más que un oficio es considerado una profesión, siendo fundamental en el cuidado estético masculino y las nuevas tendencias en cabello y barbas. La tecnología y las nuevas técnicas de estilos han marcado un antes y un después en el desarrollo de las actividades de los barberos. Ahora pongamos una buena música y comencemos a aprender. Manos a la obra!"
         video="https://www.youtube.com/embed/pXRviuL6vMY"
       ></AcordeonVideos>
 

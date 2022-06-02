@@ -21,7 +21,9 @@ export default function Card(props) {
       </Text>
       <Text fontSize={15}>{props.subtitulo}</Text>
       <Link
-        href="https://mpago.la/2y3sBEb"
+        href="
+        https://mpago.la/1pf31hA
+        "
         isExternal
       >
         <Boton textContent={props.precio}></Boton>

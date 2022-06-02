@@ -1,5 +1,5 @@
 
-import { Box, Stack, Image,   } from "@chakra-ui/react";
+import { Box, Stack, Image,  Text, List, ListItem, UnorderedList } from "@chakra-ui/react";
 import Footer from "../components/sections/Footer";
 import Header from "../components/sections/Header";
 import Ofrecemos from "../components/sections/Ofrecemos";
@@ -38,6 +38,25 @@ export default function Comprar() {
       </Box>
     </Stack>
       <Ofrecemos/>
+      
+      <Stack>
+        <SubText subtext = 'Mas de 15 horas de videos, y teoría que acompaña.'></SubText>
+        <Titulo titulo = "Te ofrecemos posibilidades"></Titulo>
+        
+        <Stack px={6} justifyContent={"space-around"} alignItems={"center"} direction={["column-reverse","column", "row"]}>
+          <UnorderedList textAlign={"start"}>
+          <ListItem fontSize={20}>Más de 15 videos explicativos.</ListItem>          
+          <ListItem fontSize={20}>Teoría explicativa cada clase.</ListItem>
+          <ListItem fontSize={20}> Posibilidad de comunicación con el profesor a cargo.</ListItem>
+          <ListItem fontSize={20}> Obtenés el curso de por vida, incluídas sus actualizaciones.</ListItem>
+          </UnorderedList>
+        <Box maxW={[720, 320]} >
+          <Image src = "https://fondosmil.com/fondo/64240.jpg" borderRadius={8}></Image>
+        </Box>
+        </Stack> 
+      </Stack>
+
+
       <Footer></Footer>
       
     </>
